@@ -1,11 +1,16 @@
-import {  useNavigate } from "react-router-dom";
-export default function LandingPage(){
+import {contributorsArray} from "../data/contributors";
+import {useNavigate} from 'react-router-dom'
+export default function LandingPage() {
+	
 	const navigate = useNavigate();
-const gotoContributors = () => {
-	navigate('/contributors/my name is Jay');
-}
+
 	return <>
-	<button onClick={gotoContributors}>Hello</button>
-	this is landing page 
+		{
+			 contributorsArray.map((contributor) => (
+        <button onClick={() => navigate(`/contributors/${contributor.slug}`)} key={contributor.slug}>
+          {contributor.name}
+        </button>
+      ))
+		}
 	</>
 }
