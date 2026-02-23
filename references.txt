@@ -1,0 +1,177 @@
+Good. Now we shift from building to finishing.
+
+You are no longer experimenting. You are packaging.
+
+Here is the exact roadmap to make this mentor-ready.
+
+✅ Current Status
+
+You have:
+
+Data pipeline (glob + Asciidoctor)
+
+Slug routing
+
+Profile rendering
+
+Fuse search
+
+Sanitization
+
+Basic routing
+
+Missing:
+
+UI modernization (MUI)
+
+Proper error handling
+
+Accessibility polish
+
+Architectural README
+
+Clean project structure polish
+
+2️⃣ Normalize Data Layer
+
+In contributors.ts:
+
+Ensure:
+
+name always string
+
+location always string
+
+intro always string
+
+html always string
+
+No undefined leaking into UI.
+
+This makes your data contract professional.
+
+🎨 Phase 2 — Add Minimal MUI Layout (Half Day)
+
+You don’t need fancy UI.
+You need structured UI.
+
+Landing Page:
+
+<Container>
+
+<TextField> instead of raw input
+
+<Grid> for listing
+
+<Card> for each contributor
+
+Make whole card clickable
+
+Profile Page:
+
+<Container>
+
+<Typography variant="h4">
+
+<Divider>
+
+Proper spacing
+
+<Box> wrapping sanitized HTML
+
+This transforms it from “student project” to “real app”.
+
+♿ Phase 3 — Accessibility Pass (1 Hour)
+
+Minimum:
+
+Wrap page content in <main>
+
+Ensure single <h1> per page
+
+Add aria-label to search input
+
+Test tab navigation
+
+Run Lighthouse once
+
+You don’t need perfection.
+You need awareness.
+
+🔍 Phase 4 — Slight Search Improvement
+
+Small improvement:
+
+If no results → show “No contributors found”
+
+Debounce not required for POC
+
+Keep it simple
+
+📘 Phase 5 — The README (Most Important)
+
+This is what mentors read first.
+
+Structure:
+
+1. Project Goal
+
+Rebuild Contributor Spotlight using Vite + React.
+
+2. Current Gatsby Replacement Strategy
+
+Explain:
+
+import.meta.glob replaces gatsby-source-filesystem
+
+Asciidoctor replaces gatsby-transformer-asciidoc
+
+Slug generation from filenames
+
+Runtime parsing approach
+
+3. Architecture
+
+Explain layers:
+
+Data layer
+
+UI layer
+
+Routing
+
+Search layer
+
+4. Tradeoffs
+
+Explain:
+
+Runtime parsing vs build-time preprocessing
+
+Why eager glob used for POC
+
+Future plan for build-time script
+
+5. Next Steps
+
+Lazy loading
+
+Build-time JSON generation
+
+Performance optimization
+
+This README is what upgrades you from coder → engineer.
+
+📦 Phase 6 — Repo Cleanliness
+
+Before sharing:
+
+Remove console logs
+
+Clean commit history
+
+No commented garbage
+
+Consistent formatting
+
+Meaningful commit messages

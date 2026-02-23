@@ -1,4 +1,4 @@
-import type { Contributor } from "../types/types";
+import type { rawContributor, Contributor } from "../types/types";
 import asciidoctor from "asciidoctor";
 
 const asciidoctorInstance = asciidoctor();
@@ -26,12 +26,39 @@ const page_location = doc.getAttribute('page-location');
 const page_intro = doc.getAttribute('page-intro');
 const page_name = doc.getAttribute('page-name') || slug;
 const html = doc.convert();
-  contributorsArray.push({
-    slug,
+const raw : rawContributor = {
+	slug,
 	 name : page_name,
     location:page_location,
     intro : page_intro,
 	 html
-  });
+}
+  contributorsArray.push(normaliseData(raw));
 });
-export { contributorsArray , };
+
+
+// Helper functions that will normalise data so there is no undefined leak into UI
+
+
+function normaliseData(raw:rawContributor) : Contributor {
+
+	return {
+		slug : toSafeString(raw.slug),
+		name : toSafeString(raw.name),
+		location : toSafeString(raw.location),
+		intro : toSafeString(raw.intro),
+		html : toSafeString(raw.html),
+
+	}
+
+}
+
+function toSafeString(value : unknown) : string{ // helps to trim the string or else return ""
+	if(typeof value === "string") return value.trim(); 
+	return ""
+}
+
+
+
+export { contributorsArray };
+
