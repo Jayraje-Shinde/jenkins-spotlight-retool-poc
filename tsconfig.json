@@ -1,6 +1,6 @@
 {
   "files": [],
-"include" :[ "./global.d.ts"],
+"include" :[ "src","./global.d.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
