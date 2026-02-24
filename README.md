@@ -25,7 +25,7 @@ This is scoped intentionally. The following are out of scope for the POC but wou
 - Full coverage of all production `.adoc` attributes from the real contributor files
 - Accessibility audit
 - Unit/integration tests
--UI styling is minimal — the POC is focused on the content pipeline and data layer. Visual parity with the existing site would be part of the full implementation.
+- UI styling is minimal — the POC is focused on the content pipeline and data layer. Visual parity with the existing site would be part of the full implementation.
 
 ---
 
