@@ -3,7 +3,7 @@
 A proof of concept for the [GSoC 2026 project: Retooling the Jenkins Contributor Spotlight](https://www.jenkins.io/projects/gsoc/).  
 The goal is to replace the existing Gatsby-based pipeline with a simpler Vite + React stack.
 
-**[Live Demo](https://jenkins-spotlight-retool-poc.vercel.app)** · **[Original Jenkins Spotlight](https://contributors.jenkins.io)**
+**[Live Demo](https://jenkins-spotlight-retool-poc-p5v8.vercel.app/)** · **[Original Jenkins Spotlight](https://contributors.jenkins.io)**
 
 ---
 
